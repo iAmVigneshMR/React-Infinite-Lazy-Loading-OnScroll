@@ -4,6 +4,7 @@ import ErrorFallback from './ErrorBoundary';
 const InfiniteScrolling = React.lazy(() => import("./InfiniteScrolling"));
 const InfiniteScrollingWithApi = React.lazy(() => import("./InfiniteScrollingWithApi"));
 const InfiniteScroolingWithApiTwo = React.lazy(() => import("./InfiniteScroolingWithApiTwo"));
+const ReacctInfiniteScrollComponent = React.lazy(() => import("./ReacctInfiniteScrollComponent"));
 
 const IndexInfinite = () => {
     return (
@@ -11,7 +12,8 @@ const IndexInfinite = () => {
             <ErrorBoundary FallbackComponent={ErrorFallback} onReset={() => {}}>
                 <Suspense fallback={<div>Loading...</div>}>
                     {/* <InfiniteScrolling /> */}
-                    <InfiniteScrollingWithApi />
+                    {/* <InfiniteScrollingWithApi /> */}
+                    <ReacctInfiniteScrollComponent />
                     {/* <InfiniteScroolingWithApiTwo /> */}
                 </Suspense>
             </ErrorBoundary>
